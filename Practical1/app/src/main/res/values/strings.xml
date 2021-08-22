@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Practical 1</string>
+    <string name="et_message">Enter a Value</string>
+    <string name="button2">Save</string>
+</resources>
