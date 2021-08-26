@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pending">
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="112dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:text="Please be kind enough to allow me to sit for the exams."
+                android:textColor="@color/color_primary_text"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="33dp"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:textColor="@color/ticket_btn_text"
+                app:backgroundTint="@color/ticket_btn_bg"
+                app:cornerRadius="100dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:iconPadding="0dp"
+                app:iconTint="@color/ticket_btn_text" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/button3"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:textColor="@color/ticket_btn_text"
+                app:backgroundTint="@color/ticket_btn_bg"
+                app:cornerRadius="100dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_baseline_delete_24"
+                app:iconPadding="0dp"
+                app:iconTint="@color/ticket_btn_text" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/button4"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                app:backgroundTint="@color/ticket_pending"
+                tools:text="@string/dashboard_tab_1" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="379dp"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="308dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:text="Please be kind enough to allow me to sit for the exams."
+                android:textColor="@color/color_primary_text"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="33dp"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:textColor="@color/ticket_btn_text"
+                app:backgroundTint="@color/ticket_btn_bg"
+                app:cornerRadius="100dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:iconPadding="0dp"
+                app:iconTint="@color/ticket_btn_text" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/button3"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:textColor="@color/ticket_btn_text"
+                app:backgroundTint="@color/ticket_btn_bg"
+                app:cornerRadius="100dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_baseline_delete_24"
+                app:iconPadding="0dp"
+                app:iconTint="@color/ticket_btn_text" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/button4"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                app:backgroundTint="@color/ticket_pending"
+                tools:text="@string/dashboard_tab_1" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="379dp"
+        android:layout_height="175dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="504dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="false"
+        app:contentPadding="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/info_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:text="Please be kind enough to allow me to sit for the exams."
+                android:textColor="@color/color_primary_text"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/button3"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="33dp"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:textColor="@color/ticket_btn_text"
+                app:backgroundTint="@color/ticket_btn_bg"
+                app:cornerRadius="100dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_baseline_edit_24"
+                app:iconPadding="0dp"
+                app:iconTint="@color/ticket_btn_text" />
+
+            <Button
+                android:id="@+id/button4"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/button3"
+                android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:textColor="@color/ticket_btn_text"
+                app:backgroundTint="@color/ticket_btn_bg"
+                app:cornerRadius="100dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_baseline_delete_24"
+                app:iconPadding="0dp"
+                app:iconTint="@color/ticket_btn_text" />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/info_text2"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="30dp"
+                android:layout_toRightOf="@+id/button4"
+                android:layout_weight="1"
+                android:textSize="12dp"
+                app:backgroundTint="@color/ticket_pending"
+                tools:text="@string/dashboard_tab_1" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+
+
+</FrameLayout>
