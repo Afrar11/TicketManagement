@@ -14,17 +14,18 @@ import android.net.Uri;
 import java.util.HashMap;
 
 public class TicketManagementProvider extends ContentProvider {
-    static final String PROVIDER_NAME = Resources.getSystem().getString(R.string.provider_name);
+    static final String PROVIDER_NAME = "com.example.mobileapplication.TicketManagementProvider";
     static final String URL = "content://" + PROVIDER_NAME + "/tickets";
     static final Uri CONTENT_URI = Uri.parse(URL);
 
-    static final String id = Resources.getSystem().getString(R.string.ticket_field_id);
-    static final String ticketText = Resources.getSystem().getString(R.string.ticket_field_text);
-    static final String status = Resources.getSystem().getString(R.string.ticket_field_status);
+    static final String id = "Id";
+    static final String ticketText = "Text";
+    static final String status =  "Status";
 
     static final int uriCode = 1;
     static final UriMatcher uriMatcher;
     private static HashMap<String, String> values;
+
     static {
         uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
         uriMatcher.addURI(PROVIDER_NAME, "tickets", uriCode);
@@ -115,9 +116,9 @@ public class TicketManagementProvider extends ContentProvider {
     static final String TABLE_NAME = "Tickets";
     static final int DATABASE_VERSION = 1;
     static final String CREATE_DB_TABLE = " CREATE TABLE " + TABLE_NAME
-            + " (id INTEGER PRIMARY KEY AUTOINCREMENT, "
-            + " ticketText TEXT NOT NULL, "
-            + " status TEXT NOT NULL);";
+            + " (Id INTEGER PRIMARY KEY AUTOINCREMENT, "
+            + " Text TEXT NOT NULL, "
+            + " Status TEXT NOT NULL);";
 
     private static class DatabaseHelper extends SQLiteOpenHelper {
         DatabaseHelper(Context context) {

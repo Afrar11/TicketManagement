@@ -3,9 +3,11 @@ package com.example.mobileapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.viewpager2.widget.ViewPager2;
-
+import android.content.ContentValues;
 import android.os.Bundle;
 import android.widget.TableLayout;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ViewPager2 viewPager2;
     FragmentAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 tabLayout.selectTab(tabLayout.getTabAt(position));
             }
         });
+
+        ContentValues values = new ContentValues();
+        values.put(TicketManagementProvider.ticketText,"Test new ticket");
+        values.put(TicketManagementProvider.status, "Pending");
+        values.put(TicketManagementProvider.id, 2);
+
+        getContentResolver().insert(TicketManagementProvider.CONTENT_URI, values);
+
+        Toast.makeText(getBaseContext(), "New Record Inserted", Toast.LENGTH_LONG).show();
 
     }
 }
