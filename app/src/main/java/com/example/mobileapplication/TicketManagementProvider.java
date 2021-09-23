@@ -1,5 +1,6 @@
 package com.example.mobileapplication;
 import android.content.ContentProvider;
+import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
 import android.content.Context;
@@ -11,7 +12,10 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteQueryBuilder;
 import android.net.Uri;
+
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 public class TicketManagementProvider extends ContentProvider {
     static final String PROVIDER_NAME = "com.example.mobileapplication.TicketManagementProvider";
@@ -74,6 +78,7 @@ public class TicketManagementProvider extends ContentProvider {
         c.setNotificationUri(getContext().getContentResolver(), uri);
         return c;
     }
+
     @Override
     public Uri insert(Uri uri, ContentValues values) {
         long rowID = db.insert(TABLE_NAME, "", values);
@@ -111,7 +116,7 @@ public class TicketManagementProvider extends ContentProvider {
         getContext().getContentResolver().notifyChange(uri, null);
         return count;
     }
-    private SQLiteDatabase db;
+    public SQLiteDatabase db;
     static final String DATABASE_NAME = "TicketManagementDB";
     static final String TABLE_NAME = "Tickets";
     static final int DATABASE_VERSION = 1;

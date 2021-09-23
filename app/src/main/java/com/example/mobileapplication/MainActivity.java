@@ -2,14 +2,20 @@ package com.example.mobileapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager2.widget.ViewPager2;
 import android.content.ContentValues;
+import android.content.Context;
 import android.os.Bundle;
 import android.widget.TableLayout;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         tabLayout = findViewById(R.id.tab_layout1);
@@ -57,14 +64,31 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        ContentValues values = new ContentValues();
-        values.put(TicketManagementProvider.ticketText,"Test new ticket");
-        values.put(TicketManagementProvider.status, "Pending");
-        values.put(TicketManagementProvider.id, 2);
 
-        getContentResolver().insert(TicketManagementProvider.CONTENT_URI, values);
+        Context context = getApplicationContext();
+        DBHandler db = new DBHandler(context);
+/*
+        db.addInfo("New pending ticket", "pending");
+        db.addInfo("New resolved ticket", "resolved");
+        db.addInfo("New unresolved ticket", "unresolved");*/
+
+        List<Ticket> listOfTickets = db.fetchTicketsForType("pending");
 
         Toast.makeText(getBaseContext(), "New Record Inserted", Toast.LENGTH_LONG).show();
 
+        initRecyclerView((ArrayList<Ticket>) listOfTickets);
     }
+
+    private void initRecyclerView(ArrayList<Ticket> listOfTickets){
+        setContentView(R.layout.fragment_pending);
+
+        RecyclerView recyclerView = findViewById(R.id.recycler_view_pending);
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(listOfTickets,this);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        setContentView(R.layout.activity_main);
+
+    }
+
 }

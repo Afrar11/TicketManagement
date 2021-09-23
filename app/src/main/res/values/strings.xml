@@ -16,4 +16,9 @@
     <string name="ticket_field_id">Id</string>
     <string name="ticket_field_text">Text</string>
     <string name="ticket_field_status">Status</string>
+
+    <string name="ticket_status_pending">pending</string>
+    <string name="ticket_status_unresolved">unresolved</string>
+    <string name="ticket_status_resolved">resolved</string>
+
 </resources>
