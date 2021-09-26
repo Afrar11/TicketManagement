@@ -9,7 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MobileApplication">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".editTicket"
+            android:exported="true" />
+        <activity
+            android:name=".addTicket"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,10 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <provider
-            android:authorities="com.example.mobileapplication.TicketManagementProvider"
-            android:name=".TicketManagementProvider">
-        </provider>
+            android:name=".TicketManagementProvider"
+            android:authorities="com.example.mobileapplication.TicketManagementProvider" />
     </application>
 
 </manifest>
